@@ -3,7 +3,7 @@
 
 # NB! Set your site's url, otherwise stuff will break :)
 
-url: "http://192.168.7.121:4000"
+url: "https://gluesolution.xyz"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (https://yourusername.github.io/repository-name)
@@ -12,7 +12,7 @@ url: "http://192.168.7.121:4000"
 #
 # NB! Without this *nothing* will work, because it's used in every path :)
 
-baseurl: /blogs
+#baseurl: /blogs
 
 # Google tracking id
 
@@ -22,7 +22,7 @@ google-tracking-id: ""
 # If you are not hosted on Github Pages, and your host doesn't support https
 # then you should disable it
 
-force-https: false
+force-https: True
 
 #############
 # HTML Head #
@@ -33,15 +33,15 @@ author: "Hang (Harry) Blogs"
 title: "We don't get older, we get better!"
 description: "Blog and website of Harry. Just share to be shared!"
 keywords: "sysadmin, networking, amazon web service"
-favicon: "/img/favicon.ico"
+favicon: "https://d21zrtq8qulx3l.cloudfront.net/img/favicon.ico"
 
 ################
 # Header layout #
 ################
 
-black-favicon: "/img/black-lab-glass.ico"
+black-favicon: "https://d21zrtq8qulx3l.cloudfront.net/img/black-lab-glass.ico"
 
-background-img: "../img/background.png"
+background-img: "https://d21zrtq8qulx3l.cloudfront.net/img/background.png"
 
 ##############################
 # Dynamic Text on the Header #
@@ -58,7 +58,7 @@ lines: # You can add HTML Tags in the Text
   - text: "The lower you fall, the higher you'll fly."
   - text: "If you fail to plan, you are planning to fail"
 
-me-img: "/img/meinthree.png"
+me-img: "https://d21zrtq8qulx3l.cloudfront.net/img/meinthree.png"
 
 ##############################
 # Color the browser elements #
@@ -74,12 +74,12 @@ web-app-mode: True
 
 # Icons for Web App mode
 
-icon-36p: "/img/web-app/icon-36p.png"
-icon-48p: "/img/web-app/icon-48p.png"
-icon-72p: "/img/web-app/icon-72p.png"
-icon-96p: "/img/web-app/icon-96p.png"
-icon-144p: "/img/web-app/icon-144p.png"
-icon-192p: "/img/web-app/icon-192p.png"
+icon-36p: "https://d21zrtq8qulx3l.cloudfront.net/img/web-app/icon-36p.png"
+icon-48p: "https://d21zrtq8qulx3l.cloudfront.net/img/web-app/icon-48p.png"
+icon-72p: "https://d21zrtq8qulx3l.cloudfront.net/img/web-app/icon-72p.png"
+icon-96p: "https://d21zrtq8qulx3l.cloudfront.net/img/web-app/icon-96p.png"
+icon-144p: "https://d21zrtq8qulx3l.cloudfront.net/img/web-app/icon-144p.png"
+icon-192p: "https://d21zrtq8qulx3l.cloudfront.net/img/web-app/icon-192p.png"
 
 ########
 # Blog #
@@ -95,12 +95,12 @@ email-share: True
 fb-share: True
 twitter-share: True
 linkedin-share: True
-reddit-share: True
+reddit-share: False
 google-plus-share: True
-tumblr-share: True
-pinterest-share: True
-pocket-share: True
-vkontakte-share: True
+tumblr-share: False
+pinterest-share: False
+pocket-share: False
+vkontakte-share: False
 
 disqus-shortname: "hangnt1001"
 
@@ -111,16 +111,100 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/meintwo.png"
+  - image: "https://d21zrtq8qulx3l.cloudfront.net/img/meintwo.png"
     date: "September 2013 - Today"
     description: "Saving the world!"
-  - image: "/img/meinone.png"
+  - image: "https://d21zrtq8qulx3l.cloudfront.net/img/meinone.png"
     date: "August 2009 - September 2013"
     description: "Being a student at UIT"
 
 # First image of the Timeline
 
-timeline-img: "/img/meinfour.png"
+timeline-img: "https://d21zrtq8qulx3l.cloudfront.net/img/meinfour.png"
+
+########
+# Book #
+########
+
+book:
+  - title: "Trí tuệ Do Thái"
+    link: "https://tiki.vn/tri-tue-do-thai-tai-ban-2015-p135369.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/tri_tue_do_thai.jpg"
+  - title: "Tôi tài giỏi bạn cũng thế"
+    link: "https://tiki.vn/toi-tai-gioi-ban-cung-the-p25058.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/toi_tai_gioi.jpg"
+  - title: "Bí quyết teen thành công"
+    link: "https://tiki.vn/toi-tai-gioi-ban-cung-the-2-p30558.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/bi_quyet_teen_thanh_cong.jpg"
+  - title: "Cảm nhận thế nào đời trao thế đó"
+    link: "https://tiki.vn/cam-nhan-the-nao-doi-trao-the-do-p149006.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/how_life_works.jpg"
+  - title: "Làm chủ tư duy thay đổi vận mệnh"
+    link: "https://tiki.vn/lam-chu-tu-duy-thay-doi-van-menh-p70202.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/lam_chu_tu_duy_thay_doi_van_menh.jpg"
+  - title: "Nếu tôi biết được khi còn 20"
+    link: "https://tiki.vn/neu-toi-biet-duoc-khi-con-20-tai-ban-p184350.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/neu_toi_duoc_biet_khi_toi_20.jpg"
+  - title: "Những bí ẩn trên thế giới chưa được giải đáp"
+    link: "https://tiki.vn/nhung-bi-an-tren-the-gioi-chua-duoc-giai-dap-bia-cung-p113343.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/nhung_bi_an_tren_the_gioi.jpg"
+  - title: "Khám phá bí ẩn về nhân loại"
+    link: "https://tiki.vn/kham-pha-bi-an-nhan-loai-p71876.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.netimg/book/kham_pha_bi_an_ve_nhan_loai.jpg"
+  - title: "Bộ luyện thi IELTS - thật là đơn giản"  
+    link: "https://tiki.vn/bo-luyen-thi-ielts-that-la-don-gian-ielts-course-book-tron-bo-2-cuon-p187817.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/luyen_thi_ielts_that_la_don_gian.jpg"
+  - title: "Hãy sống cuộc đời như bạn muốn" 
+    link: "https://tiki.vn/hay-song-cuoc-doi-nhu-ban-muon-p105229.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/hay_song_cuoc_doi_nhu_ban_muon.jpg"
+  - title: "Tony Buổi sáng - Trên đường băng"
+    link: "https://tiki.vn/tren-duong-bang-p151116.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/tony_buoi_sang_tren_duong_bang.jpg"
+  - title: "Cà phê cùng Tony"  
+    link: "https://tiki.vn/ca-phe-cung-tony-bia-cung-p270458.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/ca_phe_cung_tony.jpg"
+  - title: "Dám thay đổi"
+    link: "https://tiki.vn/dam-thay-doi-tai-ban-2014-p118414.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/dam_thay_doi.jpg"
+  - title: "Luyện siêu trí nhớ từ vựng Tiếng Anh"
+    link: "https://tiki.vn/luyen-sieu-tri-nho-tu-vung-tieng-anh-p140609.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/luyen_sieu_tri_nho.jpg"
+  - title: "Phương pháp giáo dục con của người Do Thái"
+    link: "https://tiki.vn/phuong-phap-giao-duc-con-cua-nguoi-do-thai-p67934.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/phuong_phap_giao_duc_con_cua_nguoi_do_thai.jpg"
+  - title: "Đắc nhân tâm"
+    link: "https://tiki.vn/dac-nhan-tam-p106053.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/dac_nhan_tam.jpg"
+  - title: "Oxford Picture Dictionary"
+    link: "https://tiki.vn/oxford-picture-dictionary-monolingual-english-p2453.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/oxford_picture_dictionary.jpg"
+  - title: "Tự học đạm thoại tiếng anh ngẫu hứng"
+    link: "https://tiki.vn/tu-hoc-dam-thoai-tieng-anh-ngau-hung-kem-cd-p159873.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/tu_hoc_dam_thoai_tieng_anh_ngau_hung.jpg"
+  - title: "Tạo lập mô hình kinh doanh"
+    link: "https://tiki.vn/tao-lap-mo-hinh-kinh-doanh-p171028.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/business_model_generation.jpg"
+  - title: "Jeff Bezos và kỷ nguyên công nghệ"
+    link: "https://tiki.vn/jeff-bezos-va-ky-nguyen-amazon-p125610.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/the_age_of_amazon.jpg"
+  - title: "Chiến lược IELTS 7"
+    link: "https://tiki.vn/chien-luoc-ielts-7-0-p190480.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/chien_luoc_ielts_7.jpg"
+  - title: "Người thông minh làm thế nào để hạnh phúc?"
+    link: "https://tiki.vn/nguoi-thong-minh-lam-the-nao-de-hanh-phuc-p45252.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/nguoi_thong_minh_lam_the_nao_de_hanh_phuc.jpg"
+  - title: "Nghệ thuật giao tiếp để thành công"
+    link: "https://tiki.vn/nghe-thuat-giao-tiep-de-thanh-cong-92-thu-thuat-bac-thay-giao-tiep-1-p190020.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/nghe_thuat_giao_tiep_de_thanh_cong.jpg"
+  - title: "Những câu chuyện thành công nổi tiếng nhất của mọi thời đại 2"
+    link: "https://tiki.vn/nhung-cau-chuyen-thanh-cong-noi-tieng-nhat-cua-moi-thoi-dai-p68435.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/nhung_cau_chuyen_thanh_cong.jpg"
+  - title: "Bí quyết học đâu nhớ đó"  
+    link: "https://tiki.vn/bi-quyet-hoc-dau-nho-do-p160873.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/bi_quyet_hoc_dau_nho_do.jpg"
+  - title: "Chỉ cần mẫu khăn giấy"
+    link: "https://tiki.vn/chi-can-mau-khan-giay-p84621.html"
+    image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/chi_can_mau_khan_giay.jpg"
 
 ###########
 # Contact #
@@ -137,7 +221,7 @@ email: "golden.eyes.1412@gmail.com"
 
 # if the author_blurb is not set, then this feature is skipped
 author_blurb: "Harry Nguyen is an awesome person. Abosolutely true!."
-author_blurb_image: "/img/meinthree.png"
+author_blurb_image: "https://d21zrtq8qulx3l.cloudfront.net/img/meinthree.png"
 
 ##################
 # Social Buttons #
@@ -157,7 +241,7 @@ social:
 # 404 page #
 ############
 
-404-img: "/img/labtocat.png"
+404-img: "https://d21zrtq8qulx3l.cloudfront.net/img/labtocat.png"
 
 ##################
 # GPG on Keybase #
@@ -177,6 +261,7 @@ pages_list:
   About: 'about'
   Blog: 'latest-post'
   Timeline: 'timeline'
+  Book: 'book'
   Contact: 'contact'
 
 # Exclusion list from the generated _site
