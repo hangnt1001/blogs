@@ -33,7 +33,7 @@ author: "Hang (Harry) Blogs"
 title: "We don't get older, we get better!"
 description: "Blog and website of Harry. Just share to be shared!"
 keywords: "sysadmin, networking, amazon web service"
-favicon: "https://d21zrtq8qulx3l.cloudfront.net/img/favicon.ico"
+favicon: "/img/favicon.ico"
 
 ################
 # Header layout #
@@ -114,7 +114,7 @@ events:
   - image: "/img/meintwo.png"
     date: "September 2013 - Today"
     description: "Saving the world!"
-  - image: "https://d21zrtq8qulx3l.cloudfront.net/img/meinone.png"
+  - image: "/img/meinone.png"
     date: "August 2009 - September 2013"
     description: "Being a student at UIT"
 
