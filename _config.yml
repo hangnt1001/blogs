@@ -126,7 +126,7 @@ timeline-img: "https://d21zrtq8qulx3l.cloudfront.net/img/meinfour.png"
 # Book #
 ########
 
-book:
+books:
   - title: "Trí tuệ Do Thái"
     link: "https://tiki.vn/tri-tue-do-thai-tai-ban-2015-p135369.html"
     image: "https://d21zrtq8qulx3l.cloudfront.net/img/book/tri_tue_do_thai.jpg"
