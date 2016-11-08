@@ -102,7 +102,7 @@ pinterest-share: False
 pocket-share: False
 vkontakte-share: False
 
-disqus-shortname: "hangnt1001"
+disqus-shortname: "gluesolutionxyz"
 
 syntax-highlight: True
 
@@ -241,7 +241,7 @@ social:
 # 404 page #
 ############
 
-404-img: "/img/labtocat.png"
+404img: "/img/meinthree.png"
 
 ##################
 # GPG on Keybase #
