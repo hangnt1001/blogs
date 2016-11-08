@@ -4,5 +4,6 @@ rvm:
 - 2.2.2
 
 install: gem install jekyll jekyll-paginate jemoji html-proofer && gem install s3_website
+script: git pull
 script: jekyll build
 after_success: s3_website push
