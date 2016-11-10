@@ -5,7 +5,6 @@ title: How to convert a .pfx SSL certificate to .key/.crt file
 category: tech
 tags: [ 'ssl', 'pem', 'crt', 'key','pfx', 'certificate','OpenSSL' ]
 ---
-###How to convert a .pfx SSL certificate to .key/.crt file
 
 I'm using OpenSSL which can be download <a href="https://www.openssl.org/source/">here</a> to convert SSL certificate. 
 

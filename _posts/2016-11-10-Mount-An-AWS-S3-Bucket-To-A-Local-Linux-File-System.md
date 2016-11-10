@@ -5,7 +5,7 @@ title: Mount An AWS S3 Bucket To A Local Linux File System
 category: tech
 tags: [ 'aws', 's3', 'bucket', 'linux','s3fs','ubuntu','nginx' ]
 ---
-###Mount An AWS S3 Bucket To A Local Linux File System
+
 I'm using s3fs which allows Linux and Mac OS X to mount an S3 bucket via FUSE. 
 
 INSTALLATION
