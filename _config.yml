@@ -250,7 +250,10 @@ social:
 #keybase-username: hangnt
 #keybase-in-social: True
 #keybase-in-footer: True
-
+#######
+# CDN #
+#######
+cdn_url: https://d1uou502uc8dv1.cloudfront.net
 ################################################################################
 
 # NB! Tread carefully if you want to change the variables below this point!
