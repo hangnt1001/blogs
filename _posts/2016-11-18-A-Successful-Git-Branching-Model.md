@@ -8,7 +8,7 @@ tags: [ 'git', 'gitlab', 'model', 'devops','ci' ]
 
 ### A Successful Git Branching Model (Collection)
 In this post I present the development model that I’ve introduced for some of my projects (both at work and private) about a year ago, and which has turned out to be very successful. I’ve been meaning to write about it for a while now, but I’ve never really found the time to do so thoroughly, until now. I won’t talk about any of the projects’ details, merely about the branching strategy and release management.
-![git model](/img/post/git-model@2x.png){:class="img-responsive"}
+![git model]({{ site.baseurl | cdn }}/img/post/git-model@2x.png){:class="img-responsive"}
 It focuses around Git as the tool for the versioning of all of our source code. (By the way, if you’re interested in Git, our company GitPrime provides some awesome realtime data analytics on software engineering performance.)
 
 ### Why git? 
@@ -23,7 +23,7 @@ Enough about the tools, let’s head onto the development model. The model that 
 ### Decentralized but centralized 
 The repository setup that we use and that works well with this branching model, is that with a central “truth” repo. Note that this repo is only considered to be the central one (since Git is a DVCS, there is no such thing as a central repo at a technical level). We will refer to this repo as origin, since this name is familiar to all Git users.
 
-![Centralized git](/img/post/centr-decentr@2x.png){:class="img-responsive"}
+![Centralized git]({{ site.baseurl | cdn }}/img/post/centr-decentr@2x.png){:class="img-responsive"}
 
 Each developer pulls and pushes to origin. But besides the centralized push-pull relationships, each developer may also pull changes from other peers to form sub teams. For example, this might be useful to work together with two or more developers on a big new feature, before pushing the work in progress to origin prematurely. In the figure above, there are subteams of Alice and Bob, Alice and David, and Clair and David.
 
@@ -42,7 +42,7 @@ The master branch at origin should be familiar to every Git user. Parallel to th
 We consider origin/master to be the main branch where the source code of HEAD always reflects a production-ready state.
 
 We consider origin/develop to be the main branch where the source code of HEAD always reflects a state with the latest delivered development changes for the next release. Some would call this the “integration branch”. This is where any automatic nightly builds are built from.
-![main branche](/img/post/main-branches@2x.png){:class="img-responsive"}
+![main branche]({{ site.baseurl | cdn }}/img/post/main-branches@2x.png){:class="img-responsive"}
 When the source code in the develop branch reaches a stable point and is ready to be released, all of the changes should be merged back into master somehow and then tagged with a release number. How this is done in detail will be discussed further on.
 
 Therefore, each time when changes are merged back into master, this is a new production release by definition. We tend to be very strict at this, so that theoretically, we could use a Git hook script to automatically build and roll-out our software to our production servers everytime there was a commit on master.
@@ -76,7 +76,7 @@ anything except master, develop, release-*, or hotfix-*
 Feature branches (or sometimes called topic branches) are used to develop new features for the upcoming or a distant future release. When starting development of a feature, the target release in which this feature will be incorporated may well be unknown at that point. The essence of a feature branch is that it exists as long as the feature is in development, but will eventually be merged back into develop (to definitely add the new feature to the upcoming release) or discarded (in case of a disappointing experiment).
 
 Feature branches typically exist in developer repos only, not in origin.
-![feature git](/img/post/fb@2x.png){:class="img-responsive"}
+![feature git]({{ site.baseurl | cdn }}/img/post/fb@2x.png){:class="img-responsive"}
 
 ### Creating a feature branch 
 When starting work on a new feature, branch off from the develop branch.
@@ -98,7 +98,7 @@ $ git push origin develop
 </code></pre>
 The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. This avoids losing information about the historical existence of a feature branch and groups together all commits that together added the feature. Compare:
 
-![Merge without ff](/img/post/merge-without-ff@2x.png){:class="img-responsive"}
+![Merge without ff]({{ site.baseurl | cdn }}/img/post/merge-without-ff@2x.png){:class="img-responsive"}
 
 In the latter case, it is impossible to see from the Git history which of the commit objects together have implemented a feature—you would have to manually read all the log messages. Reverting a whole feature (i.e. a group of commits), is a true headache in the latter situation, whereas it is easily done if the --no-ff flag was used.
 
@@ -188,7 +188,7 @@ Branch naming convention:
 Hotfix branches are very much like release branches in that they are also meant to prepare for a new production release, albeit unplanned. They arise from the necessity to act immediately upon an undesired state of a live production version. When a critical bug in a production version must be resolved immediately, a hotfix branch may be branched off from the corresponding tag on the master branch that marks the production version.
 
 The essence is that work of team members (on the develop branch) can continue, while another person is preparing a quick production fix.
-![posthotfix branches](/img/post/hotfix-branches@2x.png){:class="img-responsive"}
+![posthotfix branches]({{ site.baseurl | cdn }}/img/post/hotfix-branches@2x.png){:class="img-responsive"}
 ### Creating the hotfix branch 
 Hotfix branches are created from the master branch. For example, say version 1.2 is the current production release running live and causing troubles due to a severe bug. But changes on develop are yet unstable. We may then branch off a hotfix branch and start fixing the problem:
 <pre><code data-trim class="yaml">
