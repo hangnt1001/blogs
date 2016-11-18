@@ -1,7 +1,7 @@
 module Jekyll
   module AssetFilter
     def cdn(input)
-      "#{@context.registers[:site].config['cdn_url']}/#{input}"
+      "#{@context.registers[:site].config['cdn_url']}#{input}"
     end
   end
 end
