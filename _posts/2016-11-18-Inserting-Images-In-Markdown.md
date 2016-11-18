@@ -14,7 +14,7 @@ This article outlines how to achieve this within Jekyll.
 ### KRAMDOWN IMAGE SYNTAX
 
 Insert the following into your .md document:
-<pre><code data-trim class="yaml">
+<pre><code data-trim class="bash">
 ![image-title-here](/path/to/image.jpg){:class="img-responsive"}
 </code></pre>
 The methodology for adding a class to the image took a bit of hunting.
