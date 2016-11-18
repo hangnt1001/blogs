@@ -188,7 +188,7 @@ Branch naming convention:
 Hotfix branches are very much like release branches in that they are also meant to prepare for a new production release, albeit unplanned. They arise from the necessity to act immediately upon an undesired state of a live production version. When a critical bug in a production version must be resolved immediately, a hotfix branch may be branched off from the corresponding tag on the master branch that marks the production version.
 
 The essence is that work of team members (on the develop branch) can continue, while another person is preparing a quick production fix.
-![posthotfix branches](/img/posthotfix-branches@2x.png){:class="img-responsive"}
+![posthotfix branches](/img/post/hotfix-branches@2x.png){:class="img-responsive"}
 ### Creating the hotfix branch 
 Hotfix branches are created from the master branch. For example, say version 1.2 is the current production release running live and causing troubles due to a severe bug. But changes on develop are yet unstable. We may then branch off a hotfix branch and start fixing the problem:
 <pre><code data-trim class="yaml">
