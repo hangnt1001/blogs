@@ -1,3 +1,8 @@
 s3_id: <%= ENV['S3_ACCESS_KEY_ID'] %>
 s3_secret: <%= ENV['S3_SECRET_KEY'] %>
 s3_bucket: gluesolution.s3.amazonaws.com
+gzip: true
+max-age:
+	"img/*": 1200
+	"css/*": 6000
+	"js": 300
