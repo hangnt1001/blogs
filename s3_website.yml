@@ -5,4 +5,4 @@ gzip: true
 max-age:
 	"img/*": 1200
 	"css/*": 6000
-	"js": 300
+	"js/*": 300
