@@ -15,10 +15,10 @@ We may need to take the additional steps of removing the certificate from the IA
 
 To make sure we delete the right certificate, we should found the correct name by command:
 <pre><code data-trim class="yaml">
-	aws iam list-server-certificates
+aws iam list-server-certificates
 </code></pre> 
 
 Then delete the certificate by command
 <pre><code data-trim class="yaml">
-	aws iam delete-server-certificate --server-certificate-name nameofcertificate
+aws iam delete-server-certificate --server-certificate-name nameofcertificate
 </code></pre> 
