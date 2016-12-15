@@ -5,7 +5,7 @@ title: changing the default FreePBX password
 category: tech
 tags: [ 'voip', 'asterisk', 'freepbx', 'password' ]
 ---
-How to change the default FreePBX Asterisk MySQL database password:
+### How to change the default FreePBX Asterisk MySQL database password:
 
 From the ssh shell:
 <pre><code data-trim class="yaml">
