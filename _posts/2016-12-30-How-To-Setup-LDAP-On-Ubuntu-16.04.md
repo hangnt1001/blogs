@@ -8,6 +8,7 @@ tags: [ 'sysadmin', 'ldap', 'ubuntu', 'openldap' ]
 ### How to setup LDAP on Ubuntu 16.04
 
 In this guide, we will setup OpenLDAP server for centralized login where the users use the single account to log to multiple servers.
+
 <strong>Install LDAP</strong>
 <pre><code data-trim class="yaml">
 $ sudo apt-get update
@@ -23,20 +24,33 @@ $ sudo dpkg-reconfigure slapd
 
 There are quite a few new questions that will be asked as you go through this process. Let's go over these now:
 
-•Omit OpenLDAP server configuration? No
-•DNS domain name? •This option will determine the base structure of your directory path. Read the message to understand exactly how this will be implemented.
-•This is actually a rather open option. You can select whatever "domain name" value you'd like, even if you don't own the actual domain. However, if you have a domain name for the server, it's probably wise to use that.
-•For this guide, we're going to select domain.local for our configuration.
+•Omit OpenLDAP server configuration? <strong>No</strong>
 
-•Organization name? •This is, again, pretty much entirely up to your preferences.
-•For this guide, we will be using example as the name of our organization.
+•DNS domain name? 
 
-•Administrator password? •As I mentioned in the installation section, this is your real opportunity to select an administrator password. Anything you select here will overwrite the previous password you used.
+	This option will determine the base structure of your directory path. Read the message to understand exactly how this will be implemented.
 
-•Database backend? HDB
-•Remove the database when slapd is purged? No
-•Move old database? Yes
-•Allow LDAPv2 protocol? No
+	This is actually a rather open option. You can select whatever <strong>"domain name"</strong> value you'd like, even if you don't own the actual domain. However, if you have a domain name for the server, it's probably wise to use that.
+
+	For this guide, we're going to select domain.local for our configuration.
+
+•Organization name?
+
+	This is, again, pretty much entirely up to your preferences.
+
+	For this guide, we will be using example as the name of our organization.
+
+•Administrator password?
+
+	As I mentioned in the installation section, this is your real opportunity to select an administrator password. Anything you select here will overwrite the previous password you used.
+
+•Database backend? <strong>HDB</strong>
+
+•Remove the database when slapd is purged? <strong>No</strong>
+
+•Move old database? <strong>Yes</strong>
+
+•Allow LDAPv2 protocol? <strong>No</strong>
 
 At this point, your LDAP should be configured in a fairly reasonable way.
 
@@ -75,9 +89,9 @@ Setup the location block that will implement our password protection for the ent
 
 Restart Apache
 
-<code><pre>
+<pre><code data-trim class="yaml">
 sudo service apache2 restart
-</pre></code>
+</code></pre>
 
 ![git model]({{ site.baseurl | cdn }}/img/post/ldap01.png){:class="img-responsive"}
 
