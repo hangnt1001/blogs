@@ -61,3 +61,5 @@ Basic setup of DNS server
 Here is the example of setting tup.
 
 ![BIND DNS]({{ site.baseurl | cdn }}/img/post/dns1.png){:class="img-responsive"}
+
+Next post, we may set up the secondary DNS.
