@@ -7,7 +7,7 @@ tags: [ 'sysadmin', 'ldap', 'ubuntu', 'openldap', 'gitlap' ]
 ---
 ### How to integrate Gitlap with OpenLdap
 
-This tutorial is show you how to integrate Gitlap with OpenLdap which is setup on Ubuntu.
+This tutorial will show you how to integrate Gitlap with OpenLdap which is setup on Ubuntu.
 
 After installed Gitlab and setup <a href="https://gluesolution.xyz/sysadmin/2016/12/30/How-To-Setup-LDAP-On-Ubuntu-16.04.html">OpenLdap</a> we configure the gitlab configs. Below is the gitlab.rb configs which is working fine.
 

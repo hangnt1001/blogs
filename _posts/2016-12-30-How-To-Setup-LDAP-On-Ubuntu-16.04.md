@@ -93,6 +93,6 @@ Restart Apache
 sudo service apache2 restart
 </code></pre>
 
-![git model]({{ site.baseurl | cdn }}/img/post/ldap01.png){:class="img-responsive"}
+![ldap]({{ site.baseurl | cdn }}/img/post/ldap01.png){:class="img-responsive"}
 
 At this point, you are logged into the phpLDAPAdmin Interface. You have ability to add users, organizational units, groups, and relationships.
