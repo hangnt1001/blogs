@@ -9,7 +9,7 @@ tags: [ 'sysadmin', 'xenserver', 'backup', 'aws', 's3' ]
 
 To backup running virtual machine in xenserver, we can following below steps:
 
-1. Find VM UUIDs
+Find VM UUIDs
 
 <pre><code data-trim class="yaml">
 # xe vm-list is-control-domain=false is-a-snapshot=false
@@ -18,7 +18,7 @@ uuid ( RO)           : 8ac95696-94f3-83c1-bc89-8bb2603f832b
     power-state ( RO): running
 </code></pre>
 
-2. Create VM snapshot
+Create VM snapshot
 
 <pre><code data-trim class="yaml">
 # xe vm-snapshot uuid=8ac95696-94f3-83c1-bc89-8bb2603f832b new-name-label=testvmsnapshot
@@ -29,19 +29,19 @@ Above command will return a UUID of snapshot, use the UUID to convert snapshot t
 # xe template-param-set is-a-template=false ha-always-run=false uuid=b15c0531-88a5-98a4-e484-01bc89131561
 </code></pre>
 
-3. Export snapshot to file
+Export snapshot to file
 
 <pre><code data-trim class="yaml">
 # xe vm-export vm=b15c0531-88a5-98a4-e484-01bc89131561 filename=vm-backup.xva
 </code></pre>
 
-4. Copy snapshot to S3
+Copy snapshot to S3
 
 <pre><code data-trim class="yaml">
 aws s3 cp vm-backup.xva s3://your-bucket
 </code></pre>
 
-5. Destroy snapshot
+Destroy snapshot
 
 <pre><code data-trim class="yaml">
 # xe vm-uninstall uuid=b15c0531-88a5-98a4-e484-01bc89131561 force=true
