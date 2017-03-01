@@ -9,7 +9,7 @@ tags: [ 'sysadmin', 'aws', 'lambda', 'devops','s3','API gateway' ]
 This post will walk you through how you can create different image sizes which do not exist on the server after you uploaded the origin image to the AWS s3 storage. The goal of this post is to show you how you make use of AWS lambda function which means no servers (EC2 instances) will be required to perform these image resizing tasks. When an image gets uploaded to the original image bucket, then user request the different image sizes, the lambda function will get triggered which in turn will resize the image in different sizes e.g  profile, cover and thumbnail sizes. Once Lambda is done with the resizing it will upload the different images to their corresponding buckets and reponse back to the user.
 
 <strong>Architecture Overview</strong>
-![architecture overview]({{ site.baseurl | cdn }}/img/post/resizefly_picture01.png){:class="img-responsive"}
+![architecture overview]({{ site.baseurl | cdn }}/img/post/resizefly_picture01.jpg){:class="img-responsive"}
 
 Below is the process:
 <pre><code data-trim class="yaml">
@@ -94,23 +94,10 @@ To set up the S3 redirection rule
 2.Expand Static Website Hosting, Edit Redirection Rules.
 3.Replace YOUR_API_HOSTNAME_HERE with the hostname that you noted above and copy the following into the redirection rules configuration:
 
-<pre><code data-trim class="yaml">
-<RoutingRules>
-    <RoutingRule>
-        <Condition>
-            <KeyPrefixEquals/>
-            <HttpErrorCodeReturnedEquals>404</HttpErrorCodeReturnedEquals>
-        </Condition>
-        <Redirect>
-            <Protocol>https</Protocol>
-            <HostName>__YOUR_API_HOSTNAME_HERE__</HostName>
-            <ReplaceKeyPrefixWith>prod/resize?key=</ReplaceKeyPrefixWith>
-            <HttpRedirectCode>307</HttpRedirectCode>
-        </Redirect>
-    </RoutingRule>
-</RoutingRules>
-</code></pre>
+![S3 redirection]({{ site.baseurl | cdn }}/img/post/resizefly_picture03.jpg){:class="img-responsive"}
 
-Upload a test image and try retrieve resized versions of the image using your bucket’s static website hosting endpoint
+
+Upload a test image and try retrieve resized versions of the image using your bucket’s static website hosting endpoint:
+<br/>
 http://YOUR_BUCKET_WEBSITE_HOSTNAME_HERE/300×300/abc.jpg
 http://YOUR_BUCKET_WEBSITE_HOSTNAME_HERE/600×600/abc.jpg
