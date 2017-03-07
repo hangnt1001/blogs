@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Continuos Integration with Jenkins to build iOS .IPA
-category: sysadmin 
+category: devops
 tags: [ 'sysadmin', 'jenkins','ci','IOS','ipa' ]
 --- 
 
