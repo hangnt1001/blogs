@@ -7,6 +7,7 @@ tags: [ 'sysadmin', 'jenkins','ci','IOS','ipa' ]
 --- 
 
 In this post, I'll show you how Jenkins can be used to automate continuos integration for IOS application to build IOS .ipa.
+<br/>
 <strong>Requirements</strong>
 
 - Xcode
@@ -21,6 +22,7 @@ From my structure, I am using one Jenkins master installed on another Linux serv
 - Slack (Used to notify event)
 
 <strong>Setup a new Jenkins item</strong>
+<br/>
 Create a new Jenkins project using freestyle option and the following settings.
 - Give your project name
 - Select Git, paste the right repository and select the right credentials.
@@ -74,7 +76,6 @@ Link ref: <a href="https://developer.apple.com/library/content/documentation/IDE
 3. Export IOS .ipa
 - Create file options.plist with following content
 
-<pre><code data-trim class="yaml">
 ![Jenkins IOS]({{ site.baseurl | cdn }}/img/post/jenkinsipa4.JPG){:class="img-responsive"}
 
 - Excute shell to export IOS .ipa
