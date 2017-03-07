@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Serverless Image Resizing with AWS Lambda, S3 and API Gateway
-category: sysadmin 
+category: devops 
 tags: [ 'sysadmin', 'aws', 'lambda', 'devops','s3','API gateway' ]
 --- 
 
