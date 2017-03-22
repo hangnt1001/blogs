@@ -18,7 +18,8 @@ chmod g+s directory  //set gid
 </code></pre>
 
 <strong>ACL (man acl)</strong> We can now use ACL to create default permissions for newly created files in the directory
-pre><code data-trim class="yaml">
+
+<pre><code data-trim class="yaml">
 setfacl -d -m g::rwx /directory  //set group to rwx default 
 setfacl -d -m o::rx /directory  //set other
 </code></pre>
