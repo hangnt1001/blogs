@@ -106,7 +106,6 @@ files:
 So far so good. We need to tell Logstash what it is going to do. We'll define 2 inputs, 2 filters and 1 output. The file tilted 03_nginx-logstash.config
 
 <pre><code data-trim class="yaml">
-
 files:
   "/etc/logstash/conf.d/rails.conf":
     content: |
@@ -120,8 +119,7 @@ files:
                         type => "nginx-error"
                  }
       }
-
-      filter {
+	  filter {
                   if [type] == "nginx-access" {
                                 grok {
                                         match => [ "message" , "%{COMBINEDAPACHELOG}+%{GREEDYDATA:extra_fields}"]
