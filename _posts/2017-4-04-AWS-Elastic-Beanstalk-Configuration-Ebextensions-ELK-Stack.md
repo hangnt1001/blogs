@@ -151,7 +151,7 @@ files:
           filter {
                         if [type] == "nginx-error" {
                                 grok {
-                                        match => [ "message" , "(?<timestamp>%{YEAR}[./-]%{MONTHNUM}[./-]%{MONTHDAY}[- ]%{TIME}) \[%{LOGLEVEL:severity}\] %{POSINT:pid}#%{NUMBER}: %{GREEDYDATA:errormessage}(?:, client: (?<client>%{IP}|%{HOSTNAME}))(?:, server: %{IPORHOST:server})(?:, request: %{QS:request})?(?:, upstream: \"%{URI:upstream}\")?(?:, host: %{QS:host})?(?:, referrer: \"%{URI:referrer}\")"]
+                                        match => [ "message" , "(?"timestamp"%{YEAR}[./-]%{MONTHNUM}[./-]%{MONTHDAY}[- ]%{TIME}) \[%{LOGLEVEL:severity}\] %{POSINT:pid}#%{NUMBER}: %{GREEDYDATA:errormessage}(?:, client: (?"client"%{IP}|%{HOSTNAME}))(?:, server: %{IPORHOST:server})(?:, request: %{QS:request})?(?:, upstream: \"%{URI:upstream}\")?(?:, host: %{QS:host})?(?:, referrer: \"%{URI:referrer}\")"]
                                         overwrite => [ "message" ]
                                 }
 
@@ -176,6 +176,13 @@ files:
       }
 </code></pre>
 
+This file defines the following:
+- <strong>Input</strong>: Nginx server's log
+- <strong>Filter</strong>: Filter nginx log (access and error)
+- <strong>Output</strong>: Send data to elastisearch
 
+<strong>Building your own dashboards</strong><br/>
+Kibana is incredibly flexible at the time of building dashboards. Go ahead and try to build as many as you can. Below is my sample dashboard for nginx access logs.
+![ELK sample nginx logs]({{ site.baseurl | cdn }}/img/post/eb-elk-03.png){:class="img-responsive"}
 
 Thanks for stoping by!
