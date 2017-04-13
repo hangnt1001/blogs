@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: AWS Elastic Beanstalk Configuration Ebextensions ELK Stack
-category: sysadmin
+category: devops
 tags: [ 'sysadmin', 'devops', 'AWS', 'Elastic Beanstalk', 'Ebextensions', 'ELK stack', 'Elasticsearch','Logstack','Kibana' ]
 --- 
 AWS Elastic Beanstalk is the service offered by Amazon to make your life eariser when you need to deploy applications :v
