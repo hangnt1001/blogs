@@ -65,6 +65,7 @@ Replace /dev/mapper/volume-vg-root with the path of the logical volume that need
 </code></pre>
 
 <strong>Resizing Filesystem</strong>
+
 The last thing to do is to resize the filesystem. 
 <pre><code data-trim class="yaml">
 # resize2fs /dev/mapper/volume-vg-root
