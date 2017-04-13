@@ -100,13 +100,13 @@ files:
       export HOME=/var/lib/logstash
 
       sudo service logstash restart
-
 </code></pre>
 
 <strong>Add logstash configuration file</strong><br/>
 So far so good. We need to tell Logstash what it is going to do. We'll define 2 inputs, 2 filters and 1 output. The file tilted 03_nginx-logstash.config
 
 <pre><code data-trim class="yaml">
+
 files:
   "/etc/logstash/conf.d/rails.conf":
     content: |
@@ -176,7 +176,6 @@ files:
                 flush_size => 1
         }
       }
-
 </code></pre>
 
 This file defines the following:
