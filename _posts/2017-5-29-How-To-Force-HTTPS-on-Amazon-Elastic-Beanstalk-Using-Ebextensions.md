@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: How To Force HTTPS on Amazon Elastic Beanstalk Using .Ebextensions
-category: sysadmin
+category: devops
 tags: [ 'sysadmin', 'devops', 'aws', 'amazon elastic beanstalk', 'https', 'nginx', 'ssl', 'docker' ]
 --- 
 
