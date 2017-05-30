@@ -5,7 +5,11 @@ title: How To Force HTTPS on Amazon Elastic Beanstalk Using .Ebextensions
 category: sysadmin
 tags: [ 'sysadmin', 'devops', 'aws', 'amazon elastic beanstalk', 'https', 'nginx', 'ssl', 'docker' ]
 --- 
+
+<strong>AWS Elastic Beanstalk</strong> is powerful deployment tools on AWS. It allows users to create applications and push them to a definable set of AWS services, including Amazon EC2, RDS, SNS, CloudWatch, Auto Scaling Group, Elastic Load Balancer.
+
 1. Configure Elastic Beanstalk to allow both HTTP and HTTPS. Make sure to set an SSL certificate. This will require a refresh of the Elastic Load Balancer.
+
 ![Elastic Beanstalk HTTPS Configuration]({{ site.baseurl | cdn }}/img/post/aws-eb-https-01.png){:class="img-responsive"}
 
 Now your application should be accessible by both HTTP and HTTPS.

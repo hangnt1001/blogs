@@ -5,6 +5,7 @@ title: Send AWS Notification to Slack
 category: sysadmin
 tags: [ 'sysadmin', 'devops', 'aws', 'slack', 'lambda', 'SNS', 'S3', 'SES' ]
 --- 
+
 In this post, we are going to ingrage AWS Lambda with slack to receive importance AWS notification in the slack channel.
 
 <strong>Create an incomming webhook in slack</strong>
