@@ -8,6 +8,8 @@ tags: [ 'sysadmin', 'devops', 'aws', 'amazon elastic beanstalk', 'https', 'nginx
 
 <strong>AWS Elastic Beanstalk</strong> is powerful deployment tools on AWS. It allows users to create applications and push them to a definable set of AWS services, including Amazon EC2, RDS, SNS, CloudWatch, Auto Scaling Group, Elastic Load Balancer.
 
+Some of Elastic Beanstalk resources can be customized using .ebextensions script. Now, we will configure the ELB to proxy HTTP and HTTPS request to different EC2 instance's ports.
+
 1. Configure Elastic Beanstalk to allow both HTTP and HTTPS. Make sure to set an SSL certificate. This will require a refresh of the Elastic Load Balancer.
 
 ![Elastic Beanstalk HTTPS Configuration]({{ site.baseurl | cdn }}/img/post/aws-eb-https-01.png){:class="img-responsive"}
