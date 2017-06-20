@@ -124,10 +124,10 @@ To create a new Hubot, click "Add Hubot" and fill out the form.
 ![Hubot Control]({{ site.baseurl | cdn }}/img/post/hubot-control-2.png){:class="img-responsive"}
 
 Now wait patiently for a while until you see a congratulatory screen with log output. Click "Control hubot" button to proceed with further configuration.
-![Hubot Control]({{ site.baseurl | cdn }}/img/post/hubot-control-3.png){:class="img-responsive"
+![Hubot Control]({{ site.baseurl | cdn }}/img/post/hubot-control-3.png){:class="img-responsive"}
 
 Start your bot and make awesome script
-![Hubot Control]({{ site.baseurl | cdn }}/img/post/hubot-control-4.png){:class="img-responsive"
+![Hubot Control]({{ site.baseurl | cdn }}/img/post/hubot-control-4.png){:class="img-responsive"}
 <strong>Bug</strong>
 You may need to add read permisson for file ~/.config/configstore/insight-yo.json.
 
