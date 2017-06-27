@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: How to configure VPN failover from Watchguard XTM Firewall to AWS
-category: devops
+category: sysadmin
 tags: [ 'sysadmin', 'vpn', 'failover', 'watchguard', 'firewall', 'aws', 'vpc' ]
 --- 
 
