@@ -1,8 +1,18 @@
 s3_id: <%= ENV['S3_ACCESS_KEY_ID'] %>
 s3_secret: <%= ENV['S3_SECRET_KEY'] %>
-s3_bucket: gluesolution.s3.amazonaws.com
+s3_bucket: gluesolution.xyz.s3.amazonaws.com
 gzip: true
 max-age:
  "img/*": 1200
  "css/*": 6000
  "js/*": 300
+exclude_from_upload:
+  - Gemfile
+  - _config.yml
+  - s3_website.yml
+  - circle.yml
+cache_control:
+  "images/*": 'public, max-age=604800, s-max-age=86400'
+  "css/*": 'public, max-age=604800, s-max-age=86400'
+  "*": 'public, max-age=604800, s-max-age=86400'
+
