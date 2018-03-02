@@ -2,15 +2,25 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.4.1
+      - image: circleci/ruby:2.4.1-node-browsers
         environment:
           JEKYLL_ENV: production
-          RUBY_ENV: production  
+          RUBY_ENV: production 
+    working_directory: ~/repo 
     steps:
       - checkout
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - v1-dependencies-
       - run:
           name: Install Dependencies
           command: gem install jekyll jekyll-paginate jemoji html-proofer && gem install s3_website
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
       - run:
           name: Jenkyll build
           command: jenkyll build
