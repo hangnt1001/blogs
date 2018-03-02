@@ -2,11 +2,10 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.4-node
+      - image: circleci/ruby:2.4.1
         environment:
           JEKYLL_ENV: production
-          RUBY_ENV: production
-        
+          RUBY_ENV: production  
     steps:
       - checkout
       - run:
