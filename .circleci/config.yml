@@ -1,0 +1,27 @@
+version: 2.0
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4-node
+        environment:
+          JEKYLL_ENV: production
+          RUBY_ENV: production
+        
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: gem install jekyll jekyll-paginate jemoji html-proofer && gem install s3_website
+      - run:
+          name: Jenkyll build
+          command: jenkyll build
+      - run:
+          name: Deploy
+          command: s3_website push --force
+workflows:
+  version:  2
+  build_test_deploy:
+    jobs:
+      - build:
+          branches:
+            only: master
