@@ -19,6 +19,7 @@ This problem becomes exacerbated in the land of containers and microservices. Do
 Let’s take an app with hardcoded configuration, change it to read from environment variables, and finally set up Kubernetes to manage the configuration for you.
 
 <strong>The Hardcoded App</strong>
+
 Here is an example.
 ![the hardcoed app]({{ site.baseurl | cdn }}/img/post/configmaps1.png){:class="img-responsive"}
 If you wanted to change the language or the API key, you would need to touch the code. This can lead to bugs, security leaks, and pollutes the source history.
@@ -26,6 +27,7 @@ If you wanted to change the language or the API key, you would need to touch the
 Let’s move to using environment variables instead.
 
 <strong>Step 1: Using environment variables</strong>
+
 Moving to environment variables is easy. Most programming languages have a built in way to read them.
 ![environment variables]({{ site.baseurl | cdn }}/img/post/configmaps2.png){:class="img-responsive"}
 
@@ -82,6 +84,7 @@ docker run -e LANGUAGE=Spanish -e API_KEY=09876 -p 3000:3000 \
 </code></pre>
 
 <strong>Step 3: Moving to Kubernetes Environment Variables</strong>
+
 When moving from Docker to Kubernetes, things change once again. You might use the same Docker container in multiple kubernetes deployments or you might want to do A/B testing with your deployments where you use the same container with different configurations.
 
 Just like the Dockerfile, you can specify environment variables directly in your Kubernetes Deployment YAML file. This means each deployment can get a customized environment.

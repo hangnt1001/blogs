@@ -144,3 +144,4 @@ kubectl create secret generic my-secret \
 
 Note: These updates are eventually consistent. It is possible that some containers get the update before others, creating inconsistencies in your deployments. If this is an issue, do not use the auto-update feature. Instead, create a new ConfigMap or Secret, and update or create a new Deployment to use the new one.
 
+Let's move to <a href="https://gluesolution.xyz/devops/2018/04/28/Kubernetes-Configmaps-And-Secrets-For-Spring-Boot-Application-Part-III.html">Part III</a> to configure a kubernetes configmap and secrets for spring boot application.
