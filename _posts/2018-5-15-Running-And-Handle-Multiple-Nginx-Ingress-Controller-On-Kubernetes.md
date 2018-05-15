@@ -18,7 +18,7 @@ Nginx is a popular choice for an Ingress Controller for a variety of features:
 - Session Persistence (Nginx Plus only), which guarantees that all the requests from the same client are always passed to the same backend container.
 - Support for JWTs (Nginx Plus only), which allows Nginx Plus to authenticate requests by validating JSON Web Tokens (JWTs).
 
-![ingress controller diagram]({{ site.baseurl | cdn }}/img/post/nginx-ingress-01.pnp){:class="img-responsive"}
+![ingress controller diagram]({{ site.baseurl | cdn }}/img/post/nginx-ingress-01.png){:class="img-responsive"}
 
 So at this point, we have deployed an application. We can deploy another application as well and can access it using same ELB, but the only condition is that ELB DNS should be mapped to the differnece URL endpoint. But let's say we have one specific application that needs a separate ELB, so for that, we can launch another ingress controller. But to launch another ingress controller, we have to mention its class so that difference ingress of different should pick up their respective ingress controller. If you won't mention the ingress class of the second controller, then it's pod will go to CrashLoopBack state.
 
