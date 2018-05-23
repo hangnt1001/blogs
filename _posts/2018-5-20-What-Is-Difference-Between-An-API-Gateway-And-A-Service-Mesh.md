@@ -43,16 +43,22 @@ With a service mesh,
 
 <strong>Functionalities of Service Mesh</strong>
 
-As we have seen earlier, the service mesh offers a set of application network function while some (primitive) network functions are still implemented the microservices level itself. There is no hard and fast rule on what functionalities should be offered from a service mesh. There are the most common features offered from a service-mesh.
-- <b>Resiliency for inter-service communications:</b> Circuit-breaking, retries and timeouts, fault injection, fault handling, load balancing and failover.
-- <b>Service discovery:</b> Discovery of service endpoints through a dedicated service registry.
-- <b>Routing:</b> Primitive routing capabilities, but no routing logics related to the business functionality of the service.
-- <b>Observability:</b> Metrics, monitoring, distributed logging, distributed tracing.
-- <b>Security:</b> Transport level security (TLS) and key management.
-- <b>Access control:</b> simple blacklist and whitelist based access control.
+As we have seen earlier, the service mesh offers a set of application network function while some (primitive) network functions are still implemented the microservices level itself. There is no hard and fast rule on what functionalities should be offered from a service mesh. Service mesh comes with its own terminology for component services and functions:
+- <b>Container orchestration framework:</b> As more and more containers are added to an application’s infrastructure, a separate tool for monitoring and managing the set of containers – a container orchestration framework – becomes essential. Kubernetes seems to have cornered this market, with even its main competitors, Docker Swarm and Mesosphere DC/OS, offering integration with Kubernetes as an alternative.
+- <b>Services vs. service instances:</b> To be precise, what developers create is not a service, but a service definition or template for service instances. The app creates service instances from these, and the instances do the actual work. However, the term service is often used for both the instance definitions and the instances themselves.
+- <b>Sidecar proxy:</b> A sidecar proxy is a proxy instance that’s dedicated to a specific service instance. It communicates with other sidecar proxies and is managed by the orchestration framework.
+- <b>Service discovery:</b> When an instance needs to interact with a different service, it needs to find – discover – a healthy, available instance of the other service. The container management framework keeps a list of instances that are ready to receive requests.
+- <b>Load balancing:</b> In a service mesh, load balancing works from the bottom up. The list of available instances maintained by the service mesh is stack‑ranked to put the least busy instances – that’s the load balancing part – at the top.
+- <b>Encryption:</b> The service mesh can encrypt and decrypt requests and responses, removing that burden from each of the services. The service mesh can also improve performance by prioritizing the reuse of existing, persistent connections, reducing the need for the computationally expensive creation of new ones.
+- <b>Authentication and authorization:</b> The service mesh can authorize and authenticate requests made from both outside and within the app, sending only validated requests to service instances
 - <b>Deployment:</b> Native support for containers. Docker and Kubernetes.
-- <b>Interservice communication protocols:</b> HTTP1.x,HTTP2,gRPC
+- <b>Support for the circuit breaker patterns:</b> The service mesh can support the circuit breaker pattern, which isolates unhealthy instances, then gradually brings them back into the healthy instance pool if warranted.
 
+The part of the service mesh where the work is getting done – service instances, sidecar proxies, and the interaction between them – is called the data plane of a service mesh application. (Though it’s not included in the name, the data plane handles processing too.) But a service mesh application also includes a monitoring and management layer, called the control plane.
+
+The control plane handles tasks such as creating new instances, terminating unhealthy or unneeded instances, monitoring, integrating monitoring and management, implementing application‑wide policies, and gracefully shutting down the app as a whole. The control plane typically includes, or is designed to connect to, an application programming interface, a command‑line interface, and a graphical user interface for managing the app.
+
+![What is service mesh?]({{ site.baseurl | cdn }}/img/post/servicemesh03.png){:class="img-responsive"}
 
 <strong>What is difference between an API gateway and a service mesh?</strong>
 

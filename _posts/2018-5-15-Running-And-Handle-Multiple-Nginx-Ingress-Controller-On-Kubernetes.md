@@ -27,7 +27,7 @@ We need to deploy ingress controller with a specific class name and later in ing
 For eg:
 
 <pre><code data-trim class="yaml">
-ApiVersion: extensions/v1beta1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: nginx-ingress-controller
