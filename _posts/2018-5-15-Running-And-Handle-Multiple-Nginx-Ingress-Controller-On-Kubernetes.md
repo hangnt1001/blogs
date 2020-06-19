@@ -43,7 +43,7 @@ spec:
         - args:
             - /nginx-ingress-controller
             - --default-backend-service=$(POD_NAMESPACE)/default-http-backend
-            - --default-ssl-certificate=$(POD_NAMESPACE)/tls-flexdigitalhealth
+            - --default-ssl-certificate=$(POD_NAMESPACE)/tls-test
             - --election-id=ingress-controller-leader
             - --ingress-class=nginx-custom
             - --configmap=$(POD_NAMESPACE)/nginx-ingress-controller
